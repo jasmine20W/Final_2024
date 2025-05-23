@@ -164,6 +164,28 @@ The information to play close attention to among all of these results is the out
 The Fishers's Exact Test illustrates that the odds ratio is 2.8
 gals(Women) who got the drug were about 0.36 times more likely to get covid-19 than women that only took the placebo.
 
+```{r}
+effect <- galsfish$p.value/(galsfish$p.value +1)
+effectivenessgal = galsfish$estimate/(galsfish$estimate +1)*100
+print(effectivenessgal)
+```
+
+```{r}
+low=(galsfish$conf.int[1]/(galsfish$conf.int[1] +1))*100
+hi=(galsfish$conf.int[2]/(galsfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
+Above is the effectiveness for the covid-19 for gals(females). If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we cn conclude that the vaccine is highly effective in protecting gals from getting covid-19. 
+
+The hallmark of an effective vaccine is 60% or better. This vaccine works great in protecting gals(women) from contructing covid-19.
+
+The odds ratio is approximately how effective the vaccine is. The odds ratio for the gals can be seen above as 74. The effectiveness confidence interval for the gals is 68.75 to 78.26.
+
+
+
 ## LGBTQ
 
 
