@@ -227,6 +227,26 @@ These numerical results show specific percentages of gay individuals that got co
 The gay participants that took the vaccine and contracted covid-19 was at 20% Those participants that only received the placebo only contacted covid-19 at 80%. The vaccine was greatly effective in protecting the gay community against COVID. 
 The odds of getting covid-19 while taking the vaccine is 1.4:5. The individuals who identified as gay and took the vaccine were less to get covid-19 than those taking the placebo.
 
+### Inferential 
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+gaysfish <- fisher.test(table1)
+gaysfish
+```
+
+The p-value is 7e-07. This in an incredibly small number and with that being said, the conclusion is that these results are unlikely to occur by chance.
+
+The Fishers's Exact Test illustrates that the odds ratio is 4.3
+Gay individuals who got the vaccine were about 77% less likely or 0.23 times as likely to get Covid-19 than gays that took the placebo.
+
+The null hypothesis is rejected in favor the the alternative. The drug is completely effective in preventing the chances of getting covid-19 in individuals who identify as gay.
+
+
+
+
 
 ## Druggies
 
