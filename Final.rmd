@@ -88,8 +88,25 @@ The null hypothesis predicts the deaths related to COVID are indepdent of sex. S
 
 The odd ratio above illustrates a ratio of 2.82 which means the odds of getting COVID-19 were about 2.8 times higher in the placebo group compared to the vaccinated group.
 
+```{r}
+effect <- guysfish$p.value/(guysfish$p.value +1)
+effectivenessguy = guysfish$estimate/(guysfish$estimate +1)*100
+print(effectivenessguy)
+```
+
+```{r}
+low=(guysfish$conf.int[1]/(guysfish$conf.int[1] +1))*100
+hi=(guysfish$conf.int[2]/(guysfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
 
 
+
+Above is the effectiveness for the covid-19 vaccine for males. If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can conclude that the vaccine is effective in protecting guys from getting covid-19. 
+
+The odds ratio is approximately how effective the vaccine is. The odds ratio for the guys can be seen above as 74. The effectiveness confidence interval for the guys is 54.73 to 72.32.
 
 ## Females
 
