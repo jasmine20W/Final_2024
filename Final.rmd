@@ -71,6 +71,25 @@ colPerc(table1)
 ```
 These numerical results show the specific percentages of men who contracted COVID-19 after receiving either the placebo or the vaccine. 26% got covid after taking the vaccine while appoximately 74% of males that were given the placebo contracted covid-19. The vaccine is clearly effective in preventing COVID-19 in males.
 
+### Inferential 
+
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+guysfish <- fisher.test(table1)
+guysfish
+```
+
+The information we would like to focus in on is the results of the output of the Fisher's Exact test. The p-value displayed above is extremely small at 2.2e-16. Seeing this number means that the results are not likely at all to occur by chance.
+
+The null hypothesis predicts the deaths related to COVID are indepdent of sex. Sincs this is a clear indication that sex does play a role in death rate of individuals, the alternative hypothesis, that there is a correlation between COVID deaths and sex, is a favorable option. 
+
+The odd ratio above illustrates a ratio of 2.82 which means the odds of getting COVID-19 were about 2.8 times higher in the placebo group compared to the vaccinated group.
+
+
+
 
 ## Females
 
