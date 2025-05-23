@@ -215,8 +215,17 @@ In the second plot, the one above, The The left two bars of the graph are all th
 
 The codes that  create this plot start with the code block beginning with dd2. dd2 can be seen in the environment pane and if inspected contains 4 variables.These variables include infected, treatment, count, and prcent(stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot.
 
+### Numerical results
 
+```{r}
+table1 <- xtabs(~infected + treatment, data=gay)
+rowPerc(table1)
+colPerc(table1)
+```
 
+These numerical results show specific percentages of gay individuals that got covid-19 after taking the placebo and taking the vaccine. 
+The gay participants that took the vaccine and contracted covid-19 was at 20% Those participants that only received the placebo only contacted covid-19 at 80%. The vaccine was greatly effective in protecting the gay community against COVID. 
+The odds of getting covid-19 while taking the vaccine is 1.4:5. The individuals who identified as gay and took the vaccine were less to get covid-19 than those taking the placebo.
 
 
 ## Druggies
