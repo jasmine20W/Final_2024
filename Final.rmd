@@ -245,8 +245,24 @@ Gay individuals who got the vaccine were about 77% less likely or 0.23 times as 
 The null hypothesis is rejected in favor the the alternative. The drug is completely effective in preventing the chances of getting covid-19 in individuals who identify as gay.
 
 
+```{r}
+effect <- gaysfish$p.value/(gaysfish$p.value +1)
+effectivenessgays = gaysfish$estimate/(gaysfish$estimate +1)*100
+print(effectivenessgays)
+```
+
+```{r}
+low=(gaysfish$conf.int[1]/(gaysfish$conf.int[1] +1))*100
+hi=(gaysfish$conf.int[2]/(gaysfish$conf.int[2] +1))*100
+options(digits=2)
+```
 
 
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
+Above is the effectiveness for the covid-19 for those who identified as gay.  If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we can conclude that the vaccine is effective in protecting people who identify as gay from getting covid-19. 
+
+The odds ratio is approximately how effective the vaccine is. The odds ratio for the gays folk be seen above as 81. This is completely effective. The people who take the vaccine are better off then those who don't receive it at all. The effectiveness confidence interval for the people who identified as gay is 71.4 to 86.7.
 
 ## Druggies
 
